@@ -4,6 +4,7 @@
   "description": "Minimal Apostrophe Boilerplate",
   "main": "app.js",
   "scripts": {
+    "dev": "monitor",
     "start": "node app.js"
   },
   "repository": {
@@ -13,20 +14,7 @@
   "author": "Apostrophe Technologies, Inc.",
   "license": "MIT",
   "dependencies": {
-    "apostrophe": "^2.103.1"
-  },
-  "nodemonConfig": {
-    "verbose": true,
-    "ignore": [
-      "lib/modules/*/public/js/*.js",
-      "locales/*.json",
-      "public/modules/**/*.less",
-      "public/modules/**/*.js",
-      "public/uploads",
-      "public/apos-minified/*.js",
-      "public/css/master-*.less",
-      "data"
-    ],
-    "ext": "json, js, html, less"
+    "apostrophe": "^2.103.1",
+    "apostrophe-monitor": "^2.1.0"
   }
 }

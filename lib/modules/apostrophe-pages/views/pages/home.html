@@ -4,14 +4,20 @@
 #}
 
 {% extends "layout.html" %}
+{% import "apostrophe-templates:common.html" as common %}
 
 {% block main %}
   <div class="main-content">
-    <h3>Hello world!
+    <h3>Home page
       {% if not data.user %}
         <a class="login-link" href="{{ apos.prefix }}/login">Login</a>
       {% endif %}
     </h3>
-    <p>This is a very bare bones Apostrophe project. Now, get to work and make a real website!</p>
+
+    <div>
+    {% for product in data.products %}
+      {{ common.render(product) }}
+    {% endfor %}
+    </div>
   </div>
 {% endblock %}

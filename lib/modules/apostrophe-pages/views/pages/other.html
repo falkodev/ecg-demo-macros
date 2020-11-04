@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% import "apostrophe-templates:common.html" as common %}
+
+{% block main %}
+  <div class="main-content">
+    <h3>Other page</h3>
+
+    <div>
+    {% for product in data.products %}
+      {{ common.render(product) }}
+    {% endfor %}
+    </div>
+  </div>
+{% endblock %}
